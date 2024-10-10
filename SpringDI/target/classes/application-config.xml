@@ -22,4 +22,102 @@
 	
 	<bean id="helloController4" p:helloService-ref="helloService" class="com.example.myapp.di.HelloController4" />
 	<!-- p속성을 활용한 수정자 주입을 통해 DI를 하는 경우2 -->
+	
+	<bean id="person1" class="com.example.myapp.member.Person">
+	    <constructor-arg value="John" />
+	    <constructor-arg value="25" />
+	</bean>
+	
+	<bean id="person2" class="com.example.myapp.member.Person">
+	    <constructor-arg value="Jane" />
+	    <constructor-arg value="30" />
+	</bean>
+
+	<bean id="personList" class="java.util.ArrayList">
+	    <constructor-arg>
+	        <list>
+	            <ref bean="person1" />
+	            <ref bean="person2" />
+	        </list>
+	    </constructor-arg>
+	</bean>
+
+	<bean id="personSet" class="java.util.HashSet">
+	    <constructor-arg>
+	        <set>
+	            <ref bean="person1" />
+	            <ref bean="person2" />
+	        </set>
+	    </constructor-arg>
+	</bean>
+	
+	<bean id="personMap" class="java.util.HashMap">
+	    <constructor-arg>
+	        <map>
+	            <entry key="person1" value-ref="person1" />
+	            <entry key="person2" value-ref="person2" />
+	        </map>
+	    </constructor-arg>
+	</bean>
+	
+	<bean id="personProperties" class="java.util.Properties">
+	    <constructor-arg>
+	        <props>
+	            <prop key="person1">John,25</prop>
+	            <prop key="person2">Jane,30</prop>
+	        </props>
+	    </constructor-arg>
+	</bean>
+	
+	<bean id="personBean" class="com.example.myapp.member.Person" />
+	
+	<bean id="listPerson" class="com.example.myapp.member.Person">
+		<property name="lists">
+			<list>
+				<value>1</value>
+				<ref bean="personBean" />
+				<bean class="com.example.myapp.member.Person">
+					<property name="name" value="Kitae"/>
+					<property name="age" value="44" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="mapPerson" class="com.example.myapp.member.Person">
+		<property name="maps">
+			<list>
+				<value>2</value>
+				<ref bean="personBean" />
+				<bean class="com.example.myapp.member.Person">
+					<property name="name" value="Gitai"/>
+					<property name="age" value="26" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="setPerson" class="com.example.myapp.member.Person">
+		<property name="sets">
+			<list>
+				<value>3</value>
+				<ref bean="personBean" />
+				<bean class="com.example.myapp.member.Person">
+					<property name="name" value="Kim"/>
+					<property name="age" value="37" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="propPerson" class="com.example.myapp.member.Person">
+		<property name="props">
+			<props>
+				<prop key="name">Kim</prop>
+				<prop key="age">37</prop>
+			</props>
+		</property>
+	</bean>
+	
+	
 </beans>
