@@ -1,0 +1,10 @@
+package com.example.myapp.di;
+
+public class HelloService implements IHelloService {
+
+	@Override
+	public String sayHello(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

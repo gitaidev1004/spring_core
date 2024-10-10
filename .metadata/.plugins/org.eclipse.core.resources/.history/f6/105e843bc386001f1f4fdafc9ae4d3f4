@@ -1,0 +1,6 @@
+package com.example.myapp.di;
+
+public class HelloService implements IHelloService {
+	
+	
+}

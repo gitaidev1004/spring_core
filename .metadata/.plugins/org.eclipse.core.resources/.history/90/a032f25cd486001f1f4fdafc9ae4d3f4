@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="helloService" class="com.example.myapp.di.HelloService"/>
+	<!--  HelloService helloService = new HelloService(); 와 같은 구문입니다. -->
+	
+	<bean id="helloController" class="com.example.myapp.di.HelloController" />
+	<!-- DI를 사용하지 않는 경우 -->
+	
+	<bean id="helloController2" class="com.example.myapp.di.HelloController2">
+		<constructor-arg ref="helloService" />
+	</bean>
+	<!-- 생성자 주입을 통해 DI를 하는 경우 -->
+	
+	<bean id="helloController3" class="com.example.myapp.di.HelloController3">
+		<property name="helloService" ref="helloService" />
+	</bean>
+	<!-- 생성자 주입을 통해 DI를 하는 경우 -->
+</beans>

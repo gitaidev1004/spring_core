@@ -1,0 +1,12 @@
+package com.example.myapp.di;
+
+public class HelloMain {
+
+	public static void main(String[] args) {
+		// HelloController 클래스의 hello() 메서드를 호출
+		// HelloController -> HelloService
+		// HelloController가 HelloService에 의존한다.
+
+	}
+
+}
