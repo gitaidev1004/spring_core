@@ -1,11 +1,18 @@
 # 1. 스프링의 개요
 
 JDK1.8 - https://adoptium.net/download
+
 Eclips(eGovFrame 3.9) = https://www.egovframe.go.kr/home/sub.do?menuNo=41
+
 프로젝트 템플릿 - https://github.com/hjk7902/spring/ 안의 workspace-spring.zip을 다운로드
 
+오라클 11 XE 11G R2 : https://www.oracle.com/database/technologies/xe-prior-release-downloads.html
+
+<br>
 
 ## 1.1 스프링의 역사
+
+### 1.1.1 자바 프로그래밍의 변화
 
 자바프로그래밍 -> JDBC Workshop -> XML -> Servlet/JSP -> RMI -> OOAD -> EJB
 	- Client(Heavy Weight Client) <-> Server(DB): Server에 DB와 SQL을 모두 저장되어 있음
@@ -14,63 +21,123 @@ Eclips(eGovFrame 3.9) = https://www.egovframe.go.kr/home/sub.do?menuNo=41
 
 지금은 자바 -> 스프링
 
-
 스프링
-- 스프링: 스프링 부트 또는 스프링 프레임워크를 의미
-- 브레인웨어
+	- 스프링: 스프링 부트 또는 스프링 프레임워크를 의미
+  - 브레인웨어
 
 스프링 부트
-- 정확히는 스프링 부트 프레임워크
-스프링 프레임워크를 이용한 개발 초기의 진입장벽을 낮춘 프레임워크
+  - 정확히는 스프링 부트 프레임워크
+  - 스프링 프레임워크를 이용한 개발 초기의 진입장벽을 낮춘 프레임워크
 
 스프링 프레임워크
-- 스프링 레거시 프레임워크라고 부르면 스프링 부트 프레임워크와 구분됨
+  - 스프링 레거시 프레임워크라고 부르면 스프링 부트 프레임워크와 구분됨
 
 공식 사이트: spring.io
 
 지금의 스프링은 다양한 프로젝트를 제공함
--  스프링 부트, 스프링 프레임워크, 스프링 클라우드, 스프링 시큐리티, 스프링 데이터 등등
+  -  스프링 부트, 스프링 프레임워크, 스프링 클라우드, 스프링 시큐리티, 스프링 데이터 등등
+  - 스프링 프로젝트라고 부르면 스프링 부트 또는 스프링 프레임워크를 이용한 프로젝트를 의미함
+  - 스프링 부트와 스프링 프레임워크는 주로 웹 개발에 사용함
+  - Spring Web MVC 프레임워크가 웹 개발에 가장 많이 사용됨
 
-스프링 프로젝트라고 부르면 스프링 부트 또는 스프링 프레임워크를 이용한 프로젝트를 의미함
+<br><br>
 
-스프링 부트와 스프링 프레임워크는 주로 웹 개발에 사용함
-- Spring Web MVC 프레임워크가 웹 개발에 가장 많이 사용됨
+## 1.2 스프링 프레임워크의 개요
+
+EJB를 주 프레임워크로 사용할 때 불편했던 점들을 해소.
+2002년 로드 존슨이 출판한 도서 Expert One-on-One J2EE Design and Development 에 선보인 코드가 Spring의 근간이 됨.
+이 도서를 읽은 개발자들이 "코드가 책으로만 존재하기에는 너무 아깝다"며 로드 존슨의 허가를 받은 뒤 프레임워크로 발전시킴.
+2003년 6월 Apache 2.0 License로 공개됨.
+
+<br>
+
+### 1.2.1 스프링 프레임워크의 특징
+
+엔터프라이즈 애플리케이션 구축을 위한 솔루션
+모듈화되어 있어 필요한 부분만 사용 가능
+선언적 트랜잭션 관리 가능
+완전한 기능을 갖춘 MVC 프레임워크 제공
+AOP 기능 사용 가능
+
+<br>
+
+### 1.2.2 스프링 프레임워트의 장점
+
+생산성
+품질보증
+유지보수
 
 
-## 1.2 스프링 프레임워크의 구성 요소
+
+<br><br>
+
+
+## 1.3 스프링 프레임워크의 구성 요소
 
 
 
-## 1.3 스프링 프레임워크의 특징
+<br><br>
 
+
+## 1.4 스프링 프레임워크의 특징
+
+<br><br>
 
 
 # 2. 스프링 개발환경 설정
 
 ## 2.1 JDK 다운로드 및 설치
 
-### 2.1.1 JDK1.8 - https://adoptium.net/temurin/releases/?version=8&os=windows 에서 JDK - 106MB .zip 을 다운로드 받습니다.
+### 2.1.1 JDK 다운로드
 
-### 2.1.2 다운로드 받은 "OpenJDK8U-jdk_x64_windows_hotspot_8u422b05.zip" 을 압축을 해제하고, C:\dev 디렉터리 안에 압축 해제한 "jdk8u422-b05"를 붙여넣기합니다.
- 
+JDK1.8 - https://adoptium.net/temurin/releases/?version=8&os=windows 에서 JDK - 106MB .zip 을 다운로드 받습니다.
+
+<br>
+
+### 2.1.2 JDK 설치
+
+다운로드 받은 "OpenJDK8U-jdk_x64_windows_hotspot_8u422b05.zip" 을 압축을 해제하고, C:\dev 디렉터리 안에 압축 해제한 "jdk8u422-b05"를 붙여넣기합니다.
+
+<br>
+
+### 2.1.3 자바 환경 설정
+
+<br><br>
+
+
 
 ## 2.2 Eclips(eGovFrame 3.9) 다운로드 및 설치
 
-### 2.2.1 Eclips(eGovFrame 3.9)  https://www.egovframe.go.kr/home/sub.do?menuNo=41 에서 "3.9.0	개발자용 개발환경 32&64bit(Implementation Tool) Version 3.9.0" 항목의 "eGovFrameDev-3.9.0-64bit.exe [1,290,915,941 Byte]"를 클릭하여 다운로드 받습니다.
+### 2.2.1 Eclips(eGovFrame 3.9) 다운로드
 
-### 2.2.2 다운로드 받은 "eGovFrameDev-3.9.0-64bit.exe"를 더블클릭하고 압축 풀기 경로를 "C:\dev"로 지정하여 [압축 풀기]를 합니다.
+https://www.egovframe.go.kr/home/sub.do?menuNo=41 에서 "3.9.0	개발자용 개발환경 32&64bit(Implementation Tool) Version 3.9.0" 항목의 "eGovFrameDev-3.9.0-64bit.exe [1,290,915,941 Byte]"를 클릭하여 다운로드 받습니다.
 
-## 2.3 프로젝트 템플릿
+<br>
 
-### 2.3.1 프로젝트 템플릿 - https://github.com/hjk7902/spring/ 안의 workspace-spring.zip을 다운로드 받습니다.
+### 2.2.2 Eclips(eGovFrame 3.9) 설치
 
-### 2.3.2 다운로드 받은 "workspace-spring.zip"를 압축을 해제한 후 workspace-spring 디렉터리를 복사하기 하여 "C:\dev"에 넣습니다.
+다운로드 받은 "eGovFrameDev-3.9.0-64bit.exe"를 더블클릭하고 압축 풀기 경로를 "C:\dev"로 지정하여 [압축 풀기]를 합니다.
 
+<br><br>
+
+## 2.3 프로젝트 템플릿 
+
+### 2.3.1 프로젝트 템플릿 다운로드
+
+https://github.com/gitaidev1004/spring/ 안의 workspace-spring.zip을 다운로드 받습니다.
+
+<br>
+
+### 2.3.2 프로젝트 템플릿 설치
+
+다운로드 받은 "workspace-spring.zip"를 압축을 해제한 후 workspace-spring 디렉터리를 복사하기 하여 "C:\dev"에 넣습니다.
+
+<br>
 
 ## 2.4 프로젝트 생성
 
 
-
+<br><br><br>
 
 # 3. Spring Legacy Project DI(Dependency Injection)
 
@@ -79,16 +146,27 @@ Eclips(eGovFrame 3.9) = https://www.egovframe.go.kr/home/sub.do?menuNo=41
 
 ## 3.1 자바 의존성 주입(Dependency Injection) 실습
 
+### 3.1.1 DI를 사용하지 않는 코드
+
+<br>
+
+### 3.1.2 생성자(Constructor) 주입(Dependency Injection)
+
+<br>
+
+### 3.1.3 수정자(Setter) 주입(Dependency Injection)
+
+<br><br>
+
 
 ## 3.2 스프링에서 XML을 이용한 의존성 주입(Dependency Injection) 실습
 
 Bean을 만들어 주입하면 항상 메모리에 로딩되어 있는 스프링 컨테이너에 넣어두고 개발자가 호출하면 스프링 컨테이너에서 가져와 활용한다.
 그렇게 되면 개발자는 인스턴스를 계속 생성할 필요없이 스프링 컨테이너 
 
+<br>
 
-
-
-
+### 3.2.1 XML의 `<bean>` 태그
 
 bean 태그의 주요 속성
 
@@ -110,11 +188,16 @@ bean 태그의 주요 속성
 | `parent`        | 해당 빈이 상속할 부모 빈을 지정합니다. 부모 빈의 설정을 상속받아 빈을 구성할 수 있습니다.                                                |
 
 
+<br>
 
+### 3.2.2 XML의 빈(bean) 설정
 
+<br>
 
+### 3.2.3 스프링 컨텍스트(Spring Context)
 
 의존성 주입 내용을 외부파일로 작성하여 의존성 내용을 로딩하는 AbstractApplicationContext의 하위 클래스들
+
 
 | 클래스/생성자                          | 설명                                                                                                   |
 |----------------------------------------|--------------------------------------------------------------------------------------------------------|
@@ -144,11 +227,9 @@ bean 태그의 주요 속성
 | `StaticApplicationContext()`           | 프로그램 내에서 직접 빈을 정의할 수 있는 기본 생성자입니다.                                                  |
 | `WebApplicationContext`                | 웹 애플리케이션 환경에서 사용하는 Spring 컨텍스트로, 웹 관련 빈을 관리합니다. `AbstractApplicationContext`의 하위 클래스는 아니지만 웹 환경에서 주로 사용됩니다. |
 
+<br>
 
-
-
-
-bean 태그의 부속 요소
+### 3.2.4 bean 태그의 부속 요소
 
 | 태그             | 속성                      | 설명                                                                                             |
 |------------------|---------------------------|--------------------------------------------------------------------------------------------------|
@@ -184,3 +265,45 @@ bean 태그의 scope 속성이 가질 수 있는 지정값
 | `session`       | 웹 애플리케이션 환경에서 사용되며, 각 HTTP 세션마다 빈의 새로운 인스턴스를 생성하고 세션이 만료되면 소멸됩니다. (주로 Spring MVC에서 사용)      |
 | `global-session`| 포털 애플리케이션 같은 특수한 환경에서 사용되며, 전역 HTTP 세션마다 빈의 인스턴스를 생성합니다. 주로 포털 환경에서 사용됩니다.                               |
 | `application`   | 웹 애플리케이션 환경에서 사용되며, 서블릿 컨텍스트마다 빈의 인스턴스를 생성하고 해당 서블릿 컨텍스트 내에서 공유됩니다.                                   |
+
+
+<br><br>
+
+## 3.3 스프링에서 어노테이션(Annotation)을 이용한 의존성 주입(Dependency Injection) 실습
+
+<br><br>
+
+## 3.4 스프링에서 Java Config 파일을 이용한 의존성 주입(Dependency Injection) 실습
+
+<br><br><br>
+
+# 4. AOP(Aspect-Oriented Programming)
+
+## 4.1 AOP 개요
+
+<br><br>
+
+## 4.2 XML을 이용한 AOP
+
+<br><br>
+
+## 4.3 Annotation을 이용한 AOP
+
+<br><br><br>
+
+# 4. 스프링 JDBC
+
+## 4.1 오라클 설치
+
+<br><br>
+
+## 4.2 스프링 JDBC 설정
+
+<br><br>
+
+## 4.3 스프링 JDBC CRUD 실습
+
+<br><br>
+
+# 5. 스프링 TX
+

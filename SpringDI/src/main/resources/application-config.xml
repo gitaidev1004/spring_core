@@ -68,6 +68,7 @@
 	        </props>
 	    </constructor-arg>
 	</bean>
+		
 	
 	<bean id="personBean" class="com.example.myapp.member.Person" />
 	
